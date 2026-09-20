@@ -11,5 +11,5 @@ export const environment = {
     postLogoutRedirectUri: 'http://localhost:4200',
   },
   apiScope: 'api://d5ea1b90-01aa-4b17-a271-b5440afd6520/access_as_user',
-  apiBaseUrl: 'http://localhost:8081',
+  apiBaseUrl: 'https://ytv5hy6rsa.execute-api.us-east-1.amazonaws.com',
 };

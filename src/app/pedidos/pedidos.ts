@@ -17,7 +17,7 @@ export class Pedidos implements OnInit {
   ngOnInit(): void {
     this.pedidosService.ping().subscribe({
       next: (data) => this.respuesta.set(data.mensaje),
-      error: () => this.error.set('No se pudo contactar al backend. ¿Está corriendo en localhost:8081?'),
+      error: () => this.error.set('No se pudo contactar al backend.'),
     });
   }
 }
