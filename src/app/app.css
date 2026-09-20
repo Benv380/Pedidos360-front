@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  font-family: system-ui, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #1a1a2e;
+  color: white;
+}
+
+.topbar h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.topbar nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.cuenta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cuenta button {
+  cursor: pointer;
+}
+
+main {
+  padding: 1.5rem;
+}

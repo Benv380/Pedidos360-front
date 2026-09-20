@@ -1,0 +1,21 @@
+<header class="topbar">
+  <h1>{{ title() }}</h1>
+
+  <nav>
+    <a routerLink="/">Inicio</a>
+    <a routerLink="/pedidos">Pedidos</a>
+  </nav>
+
+  <div class="cuenta">
+    @if (!estaAutenticado()) {
+      <button (click)="login()">Iniciar sesión</button>
+    } @else {
+      <span>{{ usuario()?.username }}</span>
+      <button (click)="logout()">Cerrar sesión</button>
+    }
+  </div>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

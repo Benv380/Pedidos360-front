@@ -1,0 +1,11 @@
+<section>
+  <h2>Pedidos</h2>
+
+  @if (respuesta()) {
+    <p>Respuesta del backend: <strong>{{ respuesta() }}</strong></p>
+  } @else if (error()) {
+    <p class="error">{{ error() }}</p>
+  } @else {
+    <p>Cargando...</p>
+  }
+</section>
