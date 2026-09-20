@@ -1,11 +1,21 @@
 <section>
   <h2>Pedidos</h2>
 
-  @if (respuesta()) {
-    <p>Respuesta del backend: <strong>{{ respuesta() }}</strong></p>
+  @if (mensaje()) {
+    <p>Respuesta del backend: <strong>{{ mensaje() }}</strong></p>
   } @else if (error()) {
     <p class="error">{{ error() }}</p>
   } @else {
     <p>Cargando...</p>
+  }
+
+  @if (claimsIdToken()) {
+    <h3>Claims del ID Token (obtenidos por el frontend al iniciar sesión)</h3>
+    <pre>{{ claimsIdToken() | json }}</pre>
+  }
+
+  @if (claimsBackend()) {
+    <h3>Claims que el backend leyó del Access Token (validación propia)</h3>
+    <pre>{{ claimsBackend() | json }}</pre>
   }
 </section>
