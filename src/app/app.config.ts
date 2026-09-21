@@ -29,8 +29,11 @@ function msalInstanceFactory(): IPublicClientApplication {
       clientId: environment.azureAd.clientId,
       authority: environment.azureAd.authority,
       knownAuthorities: environment.azureAd.knownAuthorities,
-      redirectUri: environment.azureAd.redirectUri,
-      postLogoutRedirectUri: environment.azureAd.postLogoutRedirectUri,
+      // Usa el origen actual (localhost:4200 en dev, la IP/dominio publico en
+      // prod) en vez de un valor fijo, para que la misma build funcione en
+      // cualquier URL que este registrada como Redirect URI en Azure.
+      redirectUri: window.location.origin,
+      postLogoutRedirectUri: window.location.origin,
     },
     cache: {
       cacheLocation: BrowserCacheLocation.LocalStorage,
